@@ -7,6 +7,7 @@ use crate::{AgentId, Brightness, RgbColor, Speed};
 /// Lighting effects accepted by firmware 0.6.2.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[repr(u8)]
+#[non_exhaustive]
 pub enum LightingEffect {
     /// LEDs off.
     Off = 0,

@@ -12,12 +12,14 @@ pub enum ButtonState {
     Pressed,
     /// The control was released.
     Released,
-    /// A future firmware action value not understood by this crate.
+    /// An action value whose semantics are not established. Firmware `0.6.2`
+    /// emits value `2` for encoder-rotation notifications.
     Unknown(u8),
 }
 
 /// Encoder input reported by the stock agent key bindings.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[non_exhaustive]
 pub enum EncoderInput {
     /// Counter-clockwise rotation.
     CounterClockwise,
