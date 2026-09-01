@@ -4,6 +4,8 @@
 
 The crate is intentionally device-only. A future daemon can use it to own process locking, reconnect policy, host key bindings, and virtual input injection.
 
+`libremicro` is an unofficial community project and is not affiliated with or endorsed by Work Louder or OpenAI. Product names and trademarks belong to their respective owners.
+
 ## Compatibility
 
 | Component | Supported in v1 |
@@ -105,9 +107,7 @@ LIBREMICRO_HARDWARE_TESTS=1 cargo test --features live-hardware-tests --test har
 
 Run it only with no other process owning the device. It enumerates, reads version/status, lists files, and reads `keymap.json`; it contains no lighting or write calls.
 
-The separate volatile suite tests input events and lighting. It is never run implicitly, requires a different environment opt-in, changes visible LED state, and cleans up by turning affected LEDs off rather than restoring their prior colors. Review [the complete live test plan and validation record](docs/LIVE_TESTS.md) before running it.
-
-See [the implementation plan](docs/PLAN.md) for the complete contract.
+The separate volatile suite tests input events and lighting. It is never run implicitly, requires a different environment opt-in, changes visible LED state, and cleans up by turning affected LEDs off rather than restoring their prior colors.
 
 ## License
 

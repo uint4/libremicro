@@ -7,10 +7,11 @@ description = "Direct, typed access to the stock Codex Micro HID interface"
 license = "MIT OR Apache-2.0"
 readme = "README.md"
 documentation = "https://docs.rs/libremicro"
+homepage = "https://github.com/uint4/libremicro"
 repository = "https://github.com/uint4/libremicro"
 keywords = ["codex-micro", "hid", "hidraw", "macropad"]
 categories = ["api-bindings", "hardware-support"]
-exclude = [".github/**", "CODEX.md"]
+exclude = [".github/**", ".agents/*"]
 resolver = "3"
 
 [package.metadata.docs.rs]
